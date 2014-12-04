@@ -1,0 +1,45 @@
+<!doctype html>
+<html ng-app="plunker">
+<head>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.js"></script>
+	<!--<script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.11.0.js"></script>-->
+	<script src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+
+	<script src="demo-app.js"></script>
+	<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Plugin files -->
+	<script src="../datetimepicker.js"></script>
+	<link href="../datetimepicker.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+
+<div ng-controller="DateTimePickerDemoCtrl" class="container">
+
+	<hr>
+	<br>
+	<pre>Second datepicker should have bound value {{date}} and timestamp {{date.getTime()}} </pre>
+
+	<datetimepicker data-ng-model="date" data-date-format="dd-MMM-yyyy"></datetimepicker>
+	<hr>
+	<br>
+	<div class="form-group">
+		<button class="btn btn-default btn-sm" ng-click="dateTimeNow()" data-tooltip="Set date and time to now">Now</button>
+		<button class="btn btn-default btn-sm" ng-click="toggleMinDate()" data-tooltip="After today restriction">Min date</button>
+		<button class="btn btn-default btn-sm" ng-click="timeToggleMode()">12H / 24H</button>
+		<button class="btn btn-default btn-sm" ng-click="disable()">Disable / Enable</button>
+	</div>
+	<div class="row">
+		<div class="col-xs-2 col-sm-2">Hours step</div>
+		<div class="col-xs-3">
+			<select ng-model="hourStep" class="form-control" ng-options="opt for opt in timeOptions.hourStep"></select>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-2 col-sm-2">Minutes step</div>
+		<div class="col-xs-3">
+			<select ng-model="minuteStep" class="form-control" ng-options="opt for opt in timeOptions.minuteStep"></select>
+		</div>
+	</div>
+</div>
+</body>
+</html>
