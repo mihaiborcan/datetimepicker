@@ -98,6 +98,9 @@ angular.module('ui.bootstrap.datetimepicker', ["ui.bootstrap"])
 					createEvalAttr('closeText') +
 					createEvalAttr('clearText') +
 					"/>\n" +
+//					"<span class=\"input-group-btn\">" +
+//						"<button type=\"button\" class=\"btn btn-default\" ng-click=\"open($event)\"><i class=\"glyphicon glyphicon-calendar\"></i></button>" +
+//					"</span>" +
 					"</div>\n";
 
 				if(showTime) {
