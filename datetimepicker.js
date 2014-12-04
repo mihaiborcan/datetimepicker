@@ -1,4 +1,6 @@
-angular.module('ui.bootstrap.datetimepicker', ["ui.bootstrap"])
+angular.module('ui.bootstrap.datetimepicker', [
+	"ui.bootstrap"
+])
 
 .directive('datetimepicker', [
 	function () {
